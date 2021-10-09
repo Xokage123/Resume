@@ -1,18 +1,19 @@
-import type { IProgressSkillProps, ICategoryInfo } from '../interfaces';
+import type { IProgressSkillProps, ICategoryInfo } from 'interfaces';
 import { nameCategorySkill } from 'interfaces/enum';
 
 // Icons__ProgrammingLanguages
-import JS_ICON from '../public/photo/Skills/js.jpg';
-import TS_ICON from '../public/photo/Skills/ts.png';
-import JAVA_ICON from '../public/photo/Skills/java.jpg';
-import KOTLIN_ICON from '../public/photo/Skills/kotlin.jpg';
+import JS_ICON from 'public/photo/Skills/js.jpg';
+import TS_ICON from 'public/photo/Skills/ts.png';
+import JAVA_ICON from 'public/photo/Skills/java.jpg';
+import KOTLIN_ICON from 'public/photo/Skills/kotlin.jpg';
 // Icons__ProjectBuilders
-import WEBPACK_ICON from '../public/photo/Skills/webpack.jpg';
-import GULP_ICON from '../public/photo/Skills/gulp.png';
-import VITE_ICON from '../public/photo/Skills/vite.png';
-import SNOWPACK_ICON from '../public/photo/Skills/snowpack.png';
+import WEBPACK_ICON from 'public/photo/Skills/webpack.jpg';
+import GULP_ICON from 'public/photo/Skills/gulp.png';
+import VITE_ICON from 'public/photo/Skills/vite.png';
+import SNOWPACK_ICON from 'public/photo/Skills/snowpack.png';
 // Icons__Test
-import JEST_ICON from '../public/photo/Skills/jest.jpg';
+import JEST_ICON from 'public/photo/Skills/jest.jpg';
+import CYPRESS_ICON from 'public/photo/Skills/cypress.png';
 
 const generateCategory = (
 	nameCategory: string,
@@ -92,9 +93,13 @@ export const arrayTest: Array<IProgressSkillProps> = [
 		value: '60',
 		image: JEST_ICON,
 	},
-	// Chai
-	// Prettier
-	// Eslint
+	// Cypress
+	{
+		сategory: nameCategorySkill.tests,
+		name: 'Cypress',
+		value: '30',
+		image: CYPRESS_ICON,
+	},
 ];
 
 export const categoriesAll: Array<ICategoryInfo> = [
