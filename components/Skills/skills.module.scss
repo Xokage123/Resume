@@ -1,0 +1,12 @@
+.Skills {
+  &-List {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+  }
+  &-Item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
