@@ -23,8 +23,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<title>Мое резюме</title>
 				<link
-					href="https://fonts.googleapis.com/icon?family=Material+Icons"
 					rel="stylesheet"
+					href="https://fonts.googleapis.com/icon?family=Material+Icons"
 				/>
 				<link
 					rel="stylesheet"

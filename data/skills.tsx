@@ -14,6 +14,22 @@ import SNOWPACK_ICON from 'public/photo/Skills/snowpack.png';
 // Icons__Test
 import JEST_ICON from 'public/photo/Skills/jest.jpg';
 import CYPRESS_ICON from 'public/photo/Skills/cypress.png';
+// Icons__Preprocessors
+import PUG_ICON from 'public/photo/Skills/pug.png';
+import SASS_ICON from 'public/photo/Skills/sass.png';
+// Icons__Frameworks
+import REACT_ICON from 'public/photo/Skills/react.jpg';
+import VUE_ICON from 'public/photo/Skills/vue.png';
+// Icons__UIFrameworks
+import UI_MATERIAL_ICON from 'public/photo/Skills/ui-material.png';
+import UI_REACT_SEMANTIC_ICON from 'public/photo/Skills/semantic_react.png';
+import UI_REACT_BOOTSTRAP_ICON from 'public/photo/Skills/react-bootstrap.png';
+import UI_TAILWIND_ICON from 'public/photo/Skills/tailwind.png';
+import UI_SUPABASE_ICON from 'public/photo/Skills/supabase.png';
+import UI_STORYBOOK_ICON from 'public/photo/Skills/storybook.png';
+import UI_ANT_DESIGN_ICON from 'public/photo/Skills/ant_design.png';
+// Icons__SSRFrameworks
+import NEXT_ICON from 'public/photo/Skills/next.png';
 
 const generateCategory = (
 	nameCategory: string,
@@ -52,7 +68,6 @@ export const arrayProgrammingLanguages: Array<IProgressSkillProps> = [
 		image: KOTLIN_ICON,
 	},
 ];
-
 // Сборщики
 export const arrayProjectBuilders: Array<IProgressSkillProps> = [
 	// Webpack
@@ -97,8 +112,121 @@ export const arrayTest: Array<IProgressSkillProps> = [
 	{
 		сategory: nameCategorySkill.tests,
 		name: 'Cypress',
-		value: '30',
+		value: '40',
 		image: CYPRESS_ICON,
+	},
+];
+// Препроцессоры
+export const arrayPreprocessors: Array<IProgressSkillProps> = [
+	// PUG
+	{
+		сategory: nameCategorySkill.preprocessors,
+		name: 'PUG',
+		value: '70',
+		image: PUG_ICON,
+	},
+	// Sass/Scss
+	{
+		сategory: nameCategorySkill.preprocessors,
+		name: 'Sass/Scss',
+		value: '80',
+		image: SASS_ICON,
+	},
+];
+// Фреймворки
+export const arrayFrameworks: Array<IProgressSkillProps> = [
+	// React
+	{
+		сategory: nameCategorySkill.frameworks,
+		name: 'React',
+		value: '80',
+		image: REACT_ICON,
+	},
+	// Vue 2
+	{
+		сategory: nameCategorySkill.frameworks,
+		name: 'Vue 2',
+		value: '80',
+		image: VUE_ICON,
+	},
+	// Vue 3
+	{
+		сategory: nameCategorySkill.frameworks,
+		name: 'Vue 3',
+		value: '50',
+		image: VUE_ICON,
+	},
+];
+// UI фреймворки
+export const arrayUIframeworks: Array<IProgressSkillProps> = [
+	// Material.js
+	{
+		сategory: nameCategorySkill.UIframework,
+		name: 'Material.js',
+		value: '50',
+		image: UI_MATERIAL_ICON,
+	},
+	// SemanticReact
+	{
+		сategory: nameCategorySkill.UIframework,
+		name: 'SemanticReact',
+		value: '60',
+		image: UI_REACT_SEMANTIC_ICON,
+	},
+	// Tailwind
+	{
+		сategory: nameCategorySkill.UIframework,
+		name: 'Tailwind UI',
+		value: '80',
+		image: UI_TAILWIND_ICON,
+	},
+	// Supabase
+	{
+		сategory: nameCategorySkill.UIframework,
+		name: 'Supabase',
+		value: '50',
+		image: UI_SUPABASE_ICON,
+	},
+	// Storybook
+	{
+		сategory: nameCategorySkill.UIframework,
+		name: 'Storybook',
+		value: '40',
+		image: UI_STORYBOOK_ICON,
+	},
+	// Ant Design
+	{
+		сategory: nameCategorySkill.UIframework,
+		name: 'Ant Design',
+		value: '50',
+		image: UI_ANT_DESIGN_ICON,
+	},
+	// React Bootstrap
+	{
+		сategory: nameCategorySkill.UIframework,
+		name: 'React Bootstrap',
+		value: '80',
+		image: UI_REACT_BOOTSTRAP_ICON,
+	},
+];
+// SSR фрейморки
+export const arraySSRframeworks: Array<IProgressSkillProps> = [
+	// Next
+	{
+		сategory: nameCategorySkill.SSRframework,
+		name: 'Next',
+		value: '60',
+		image: NEXT_ICON,
+	},
+];
+// Среды разработки
+export const arrayDevelopmentEnvironments: Array<IProgressSkillProps> = [
+	// PUG
+	{
+		сategory: nameCategorySkill.preprocessors,
+		name: 'PUG',
+		value: '70',
+		image: PUG_ICON,
 	},
 ];
 
@@ -109,4 +237,12 @@ export const categoriesAll: Array<ICategoryInfo> = [
 	),
 	generateCategory(nameCategorySkill.projectBuilders, arrayProjectBuilders),
 	generateCategory(nameCategorySkill.tests, arrayTest),
+	generateCategory(nameCategorySkill.preprocessors, arrayPreprocessors),
+	generateCategory(nameCategorySkill.frameworks, arrayFrameworks),
+	generateCategory(nameCategorySkill.UIframework, arrayUIframeworks),
+	generateCategory(nameCategorySkill.SSRframework, arraySSRframeworks),
+	generateCategory(
+		nameCategorySkill.developmentEnvironments,
+		arrayDevelopmentEnvironments
+	),
 ];

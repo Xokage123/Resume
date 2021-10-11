@@ -43,4 +43,8 @@ export const enum nameCategorySkill {
   frameworks = 'Frameworks',
   // Среды разработки
   developmentEnvironments = 'Development environments',
+  // UI фреймворки
+  UIframework = 'UI Frameworks',
+  // SSR фреймворки
+  SSRframework = 'SSR Frameworks',
 }

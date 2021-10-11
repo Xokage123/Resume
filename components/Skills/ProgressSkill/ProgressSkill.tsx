@@ -38,7 +38,7 @@ export const ProgressSkill: React.FC<IProgressSkillProps> = (props) => {
 					value={value}
 					percentage={false}
 				/>
-				<Small>Изученность {value}%</Small>
+				<Small>Владение: {value}%</Small>
 			</CardBody>
 		</Card>
 	);

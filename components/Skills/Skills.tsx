@@ -1,43 +1,71 @@
 // React
 import uuid from 'react-uuid';
-// Enum and Intarface
-import { ICategoryInfo, IProgressSkillProps } from 'interfaces';
-import { nameCategorySkill } from 'interfaces/enum';
 // Data
 import { categoriesAll } from 'data/skills';
 // Components
 import { ProgressSkill } from './ProgressSkill';
+// Styles__Material
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 // Styles__Tailwind
 import H3 from '@material-tailwind/react/Heading3';
-import H4 from '@material-tailwind/react/Heading4';
 // Styles__My
 import styles from './skills.module.scss';
 
-export function SkillsContent() {
+export const SkillsContent: React.FC = () => {
 	return (
-		<div className="main-container bg-info">
+		<div className="main-container pt bg-info">
 			<H3>Мои навыки</H3>
 			{categoriesAll.map((category) => {
 				return (
-					<section key={uuid()}>
-						<H4>{category.name}</H4>
-						<ul className={styles['Skills-List']}>
+					<Accordion
+						sx={{
+							marginBottom: '10px',
+							borderRadius: '15px',
+							'&:last-child': {
+								marginBottom: 0,
+							},
+						}}
+						className="bg-info"
+						key={uuid()}
+					>
+						<AccordionSummary
+							expandIcon={<ExpandMoreIcon />}
+							aria-controls="content"
+						>
+							<Typography
+								sx={{
+									fontWeight: 'bold',
+								}}
+							>
+								{category.name}
+							</Typography>
+						</AccordionSummary>
+						<AccordionDetails
+							sx={{
+								display: 'grid',
+								gridTemplateColumns: 'repeat(4, 1fr)',
+								gap: '15px',
+							}}
+						>
 							{category.elements.map((skill) => {
 								return (
-									<li className={styles['Skills-Item']} key={uuid()}>
-										<ProgressSkill
-											сategory={skill.сategory}
-											name={skill.name}
-											value={skill.value}
-											image={skill.image}
-										/>
-									</li>
+									<ProgressSkill
+										key={uuid()}
+										сategory={skill.сategory}
+										name={skill.name}
+										value={skill.value}
+										image={skill.image}
+									/>
 								);
 							})}
-						</ul>
-					</section>
+						</AccordionDetails>
+					</Accordion>
 				);
 			})}
 		</div>
 	);
-}
+};
