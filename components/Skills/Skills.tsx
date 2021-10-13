@@ -17,7 +17,7 @@ import styles from './skills.module.scss';
 
 export const SkillsContent: React.FC = () => {
 	return (
-		<div className="main-container pt bg-info">
+		<>
 			<H3>Мои навыки</H3>
 			{categoriesAll.map((category) => {
 				return (
@@ -66,6 +66,6 @@ export const SkillsContent: React.FC = () => {
 					</Accordion>
 				);
 			})}
-		</div>
+		</>
 	);
 };

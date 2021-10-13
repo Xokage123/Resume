@@ -1,10 +1,15 @@
+// Next
 import type { NextPage } from 'next';
+// Components
+import { Works } from '@/components/Works';
+// Styles__Material
+import Box from '@mui/material/Box';
 
-const Works: NextPage = () => {
+const WorksPage: NextPage = () => {
 	return (
-		<>
-			<h2>Страница на данный момент находится в разработке</h2>
-		</>
+		<Box className="main-container">
+			<Works />
+		</Box>
 	);
 };
 
