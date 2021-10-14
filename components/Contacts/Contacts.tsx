@@ -1,6 +1,11 @@
-// Styles__My
-import styles from './contacts.module.scss';
+// Components
+import { FormMail } from './FormMail';
 
-export function Contacts() {
-	return <div>Contacts</div>;
-}
+export const Contacts: React.FC = () => {
+	return (
+		<>
+			{/* Форма для связи со мной */}
+			<FormMail />
+		</>
+	);
+};

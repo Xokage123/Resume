@@ -2,12 +2,14 @@
 import type { NextPage } from 'next';
 // Components
 import { SkillsContent } from '@/components/Skills';
+// Styles__Material
+import Box from '@mui/material/Box';
 
 const Skills: NextPage = () => {
 	return (
-		<div className="main-container bg-info">
+		<Box className="main-container bg-info">
 			<SkillsContent />
-		</div>
+		</Box>
 	);
 };
 

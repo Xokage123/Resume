@@ -24,6 +24,8 @@
     "react": "17.0.2",
     "react-bootstrap": "^2.0.0-rc.0",
     "react-dom": "17.0.2",
+    "react-forms": "^2.0.0-beta36",
+    "react-hook-form": "^7.17.4",
     "react-uuid": "^1.0.2",
     "sass": "^1.42.1",
     "styled-components": "^5.3.1",
