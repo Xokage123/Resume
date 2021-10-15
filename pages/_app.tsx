@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
 import MainLayout from '../layout';
 import Head from 'next/head';
+import Script from 'next/script';
 // Style__tailwind-ui
 import '@material-tailwind/react/tailwind.css';
 // Style__Material

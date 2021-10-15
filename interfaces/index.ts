@@ -101,3 +101,20 @@ export interface IColorProps {
   information: string;
   color: string;
 }
+
+// Contacts
+
+export interface IInputProps {
+  type: string;
+  register: any;
+  placeholder: string;
+  text: string;
+  error: any;
+}
+export interface IInputsName {
+  firstName: string;
+  lastName: string;
+  mail: string;
+  nameCompany: string;
+  text: string;
+}

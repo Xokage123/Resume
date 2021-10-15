@@ -11,4 +11,5 @@ module.exports = {
 		],
 		'@babel/preset-typescript',
 	],
+	plugins: ['styled-jsx/babel'],
 };
