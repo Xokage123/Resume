@@ -1,5 +1,4 @@
 // Elements
-import { ListRepositories } from '../ListRepositories';
 import { MySwiper } from '../MySwiper';
 import { MyPasport } from '../MyPasport';
 // Interface
@@ -10,8 +9,7 @@ import { arrayMyPhoto } from '../../data/swiper';
 // Style__Me
 import styles from './startinfo.module.scss';
 
-export const StartInfo: React.FC<IStartInfoProps> = (props) => {
-	const { userRepositories } = props;
+export const StartInfo: React.FC = () => {
 	return (
 		<div className="main-container d-flex flex-wrap justify-content-around">
 			<MySwiper
@@ -19,8 +17,7 @@ export const StartInfo: React.FC<IStartInfoProps> = (props) => {
 				classImage={styles['StartInfo-Image']}
 				photos={arrayMyPhoto}
 			></MySwiper>
-			<MyPasport />
-			{/* <ListRepositories userRepositories={userRepositories} /> */}
+			<MyPasport color={'blueGray'} />
 		</div>
 	);
 };

@@ -4,13 +4,15 @@ import Image from 'next/image';
 import GmailIcon from '../public/photo/Contacts/gmail.png';
 import GithublIcon from '../public/photo/Contacts/github.png';
 
-interface Test {
+interface IContactProps {
 	href: string | NodeJS.Process;
 	textTooltip: string;
 	image: JSX.Element;
 }
 
-export const contactsInfo: Array<Test> = [
+interface IContactItem {}
+
+export const contactsInfo: Array<IContactProps> = [
 	{
 		href: `mailto:${process.env.NEXT_PUBLIC_MY_MAIL}`,
 		textTooltip: 'Моя почта',
@@ -24,3 +26,5 @@ export const contactsInfo: Array<Test> = [
 		image: <Image width={50} height={50} src={GithublIcon} alt="svg" />,
 	},
 ];
+
+export const arrayMyContacts = [];

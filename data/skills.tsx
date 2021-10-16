@@ -219,16 +219,6 @@ export const arraySSRframeworks: Array<IProgressSkillProps> = [
 		image: NEXT_ICON,
 	},
 ];
-// Среды разработки
-export const arrayDevelopmentEnvironments: Array<IProgressSkillProps> = [
-	// PUG
-	{
-		сategory: nameCategorySkill.preprocessors,
-		name: 'PUG',
-		value: '70',
-		image: PUG_ICON,
-	},
-];
 
 export const categoriesAll: Array<ICategoryInfo> = [
 	generateCategory(
@@ -241,8 +231,4 @@ export const categoriesAll: Array<ICategoryInfo> = [
 	generateCategory(nameCategorySkill.frameworks, arrayFrameworks),
 	generateCategory(nameCategorySkill.UIframework, arrayUIframeworks),
 	generateCategory(nameCategorySkill.SSRframework, arraySSRframeworks),
-	generateCategory(
-		nameCategorySkill.developmentEnvironments,
-		arrayDevelopmentEnvironments
-	),
 ];

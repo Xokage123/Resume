@@ -55,7 +55,7 @@ export interface IStartInfoProps {
   userRepositories: Array<object>;
 }
 export interface IMyPasportProps {
-  color?: TColorTailwind;
+  color: TColorTailwind;
 }
 export interface IDropdownEducationProps {
   universities: Array<IUniversityInformation>;

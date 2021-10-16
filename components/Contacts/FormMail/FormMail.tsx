@@ -12,6 +12,8 @@ import { ModalWindow } from '@/components/ModalWindow';
 import { sendInfoMail } from 'api/contacts';
 // Styles__ Bootstrap
 import { Button, Form } from 'react-bootstrap';
+// Styles__Material
+import Typography from '@mui/material/Typography';
 // Styles__ My
 import styles from './form-mail.module.scss';
 
@@ -144,6 +146,9 @@ export const FormMail: React.FC = () => {
 
 	return (
 		<Form className={styles.Form} onSubmit={handleSubmit(onSubmit)}>
+			<Typography variant="h4" gutterBottom component="h4">
+				Отправить письмо
+			</Typography>
 			{arrayInputsInformation.map((input) => (
 				<FormInput
 					key={uuid()}
