@@ -1,11 +1,9 @@
 // Elements
-import { MySwiper } from '../MySwiper';
-import { MyPasport } from '../MyPasport';
-// Interface
-import type { IStartInfoProps } from '../../interfaces';
+import { MySwiper } from 'components/MySwiper';
+import { MyPasport } from 'components/MyPasport';
 
 // Data
-import { arrayMyPhoto } from '../../data/swiper';
+import { arrayMyPhoto } from 'data/swiper';
 // Style__Me
 import styles from './startinfo.module.scss';
 
