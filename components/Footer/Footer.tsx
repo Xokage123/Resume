@@ -1,5 +1,3 @@
-// Next
-import Image from 'next/image';
 // React
 import uuid from 'react-uuid';
 // Data
