@@ -34,6 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 					crossOrigin="anonymous"
 				/>
 			</Head>
+			<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/MotionPathPlugin.min.js"></Script>
 			<Component {...pageProps} />
 		</MainLayout>
 	);
