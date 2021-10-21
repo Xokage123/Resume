@@ -36,4 +36,26 @@ export const myPasportInformation: IMyPasportInformation = {
   programmingLanguages,
   country: 'Россия',
   city: 'Москва',
+  resume: [
+    {
+      name: 'HeadHunter',
+      position: 'Frontend-разработчик',
+      link: 'https://hh.ru/resume/7380bd78ff0931b3db0039ed1f316a7871514c',
+    },
+    {
+      name: 'Хабр Карьера',
+      position: 'Frontend-разработчик',
+      link: 'https://career.habr.com/artemidasian',
+    },
+  ],
+  repositories: [
+    {
+      name: 'Github',
+      link: String(process.env.NEXT_PUBLIC_URL_MY_GITHUB),
+    },
+    {
+      name: 'GitLab',
+      link: String(process.env.NEXT_PUBLIC_URL_MY_GITLAB),
+    },
+  ],
 };
