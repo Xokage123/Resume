@@ -32,8 +32,7 @@ export interface IListElementProps {
   element: Array<IObjectAnyProperties>;
   nameUrl?: string;
 }
-
-// Pasport
+// Информация об университете
 export interface IUniversityInformation {
   name: string;
   link: string;
@@ -42,18 +41,47 @@ export interface IUniversityInformation {
   endDate: number;
   degree: string;
 }
+// Информация о резюме
+export interface IResumeInformation {
+  // Название ссайта
+  name: string;
+  // Название позиции
+  position: string;
+  // Ссылка
+  link: string;
+}
+// Информация о репозиториях
+export interface IRepositoriesInfo {
+  // Название репозитория
+  name: string;
+  // Ссылка на репозитории
+  link: string;
+}
+// Общая информация
 export interface IMyPasportInformation {
+  // Мои инициалы
   initial: string;
+  // Год рождения
   years: number;
+  // Образование
   education: Array<IUniversityInformation>;
+  // Информация обо мне
   inforamtionAboutMy: string;
+  // Языки программирования, которыми я владею
   programmingLanguages: Array<IListElements>;
+  // Страна проживания на данный момент
   country: string;
+  // Город проживания на данный момент
   city: string;
+  // Ссылки на мои резюме
+  resume: Array<IResumeInformation>;
+  // Ссылки на репозитории
+  repositories: Array<IRepositoriesInfo>;
 }
 export interface IStartInfoProps {
   userRepositories: Array<object>;
 }
+// Цветовая тема
 export interface IMyPasportProps {
   color: TColorTailwind;
 }

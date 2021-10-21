@@ -7,6 +7,8 @@ import type { IMyPasportProps } from '../../interfaces';
 import { myPasportInformation } from '../../data/pasport';
 // Components
 import { DropdownEducation } from './DropdownEducation';
+import { MyResume } from './MyResume';
+import { MyRepositories } from './MyRepositories';
 import { BasisList } from '../BasisList';
 // Styles__Tailwind
 import H3 from '@material-tailwind/react/Heading3';
@@ -21,51 +23,40 @@ import styles from './mypasport.module.scss';
 export const MyPasport: React.FC<IMyPasportProps> = ({
 	// eslint-disable-next-line react/prop-types
 	color,
-}) => {
-	return (
-		<>
-			<section>
-				<H3 color={color}>{myPasportInformation.initial}</H3>
-				<H4 color={color}>Возраст: {myPasportInformation.years}</H4>
-				<H4 color={color}>Страна проживания: {myPasportInformation.country}</H4>
-				<H4 color={color}>Город проживания: {myPasportInformation.city}</H4>
-				<BasisList
-					title="Владею следующими языками программирования:"
-					elements={myPasportInformation.programmingLanguages}
-					classList={styles['MyPasport-List_content_programmingLanguages']}
-					classItem={styles['MyPasport-Item_content_programmingLanguages']}
+}) => (
+	<>
+		<section>
+			<H3 color={color}>{myPasportInformation.initial}</H3>
+			<H4 color={color}>Возраст: {myPasportInformation.years}</H4>
+			<H4 color={color}>Страна проживания: {myPasportInformation.country}</H4>
+			<H4 color={color}>Город проживания: {myPasportInformation.city}</H4>
+			<BasisList
+				title="Владею следующими языками программирования:"
+				elements={myPasportInformation.programmingLanguages}
+				classList={styles['MyPasport-List_content_programmingLanguages']}
+				classItem={styles['MyPasport-Item_content_programmingLanguages']}
+			/>
+			<DropdownEducation universities={myPasportInformation.education} />
+		</section>
+		<section>
+			<H4 color={color}>Информация обо мне:</H4>
+			<Paragraph color={color}>
+				{myPasportInformation.inforamtionAboutMy}
+			</Paragraph>
+			<ListGroup className={styles['MyPasport-DataList']}>
+				<MyRepositories
+					classItem={styles['MyPasport-DataItem']}
+					title={'Хранилище моих работ:'}
+					color={color}
+					repoInfo={myPasportInformation.repositories}
 				/>
-				<DropdownEducation universities={myPasportInformation.education} />
-			</section>
-			<section>
-				<H4 color={color}>Информация обо мне:</H4>
-				<Paragraph color={color}>
-					{myPasportInformation.inforamtionAboutMy}
-				</Paragraph>
-				<H4 color={color}>Хранилище моих работ:</H4>
-				<ListGroup>
-					<ListGroup.Item>
-						<H5>
-							<Link
-								href={String(process.env.NEXT_PUBLIC_URL_MY_GITHUB)}
-								passHref
-							>
-								Github
-							</Link>
-						</H5>
-					</ListGroup.Item>
-					<ListGroup.Item>
-						<H5>
-							<Link
-								href={'https://gitlab.skillbox.ru/artemov_maksim_2'}
-								passHref
-							>
-								GitLab
-							</Link>
-						</H5>
-					</ListGroup.Item>
-				</ListGroup>
-			</section>
-		</>
-	);
-};
+				<MyResume
+					classItem={styles['MyPasport-DataItem']}
+					arrayResumeInformation={myPasportInformation.resume}
+					title={'Мои резюме:'}
+					color={color}
+				/>
+			</ListGroup>
+		</section>
+	</>
+);

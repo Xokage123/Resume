@@ -5,8 +5,22 @@
     }
   }
 
-  &-Item {
-    &_content_programmingLanguages {
+  &-Data {
+    &List {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    &Item {
+
+      border: 1px solid black !important;
+      border-radius: 5px;
     }
   }
+
+  // &-Item {
+  //   &_content_programmingLanguages {
+  //   }
+  // }
+
 }
