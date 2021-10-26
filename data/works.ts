@@ -1,10 +1,9 @@
 // Intrefaces__Interface
 import type { IWorksItemProps, IColorProps } from 'interfaces';
-// Intrefaces__Type
-import { TWorksStatus } from 'interfaces/type/works';
 // Styles__Material
 import { deepPurple, green, lime } from '@mui/material/colors';
 // Photo
+import NOT__PHOTO from 'public/photo/Works/NOT.png';
 import BLANCHARD__PHOTO from 'public/photo/Works/blanchard.png';
 import CULTURAL_MAP__PHOTO from 'public/photo/Works/cultural_map.png';
 import TEXNOZAVR__PHOTO from 'public/photo/Works/texnozavr.png';
@@ -46,6 +45,14 @@ const myWorksArray: Array<IWorksItemProps> = [
     description:
       'Сайт написан на React и является аналогом месссенджера Instagram. Реализована авторизация пользователя и просмотр фотографий. Так же есть возможность ставить лайки на фотографии, но для этого пользователя нужно аторизироваться',
     status: 'graduated',
+  },
+  // Сайт с карточками
+  {
+    title: 'Платформа CardWorld',
+    url: 'not-found',
+    photo: NOT__PHOTO,
+    description: 'Плафтоформа с информацией о карточных коллекционных играх',
+    status: 'plans',
   },
 ];
 

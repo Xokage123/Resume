@@ -1,16 +1,17 @@
 // Next
 import Image from 'next/image';
+// Interface
+import type {
+	IMyPhoneList,
+	IContactProps,
+	IMyMailInformation,
+} from 'interfaces';
 // Images
 import GmailIcon from 'public/photo/Contacts/gmail.png';
 import GithublIcon from 'public/photo/Contacts/github.png';
 import VKIcon from 'public/photo/Contacts/vk.png';
 
-interface IContactProps {
-	href: string | NodeJS.Process;
-	textTooltip: string;
-	image: JSX.Element;
-}
-
+// Информация о моих контактах
 export const contactsInfo: Array<IContactProps> = [
 	// Gmail
 	{
@@ -29,5 +30,25 @@ export const contactsInfo: Array<IContactProps> = [
 		href: process.env.NEXT_PUBLIC_URL_MY_VK!,
 		textTooltip: 'Моя страница в VK',
 		image: <Image width={50} height={50} src={VKIcon} alt="svg" />,
+	},
+];
+// Мои телефоны
+export const myPhoneList: Array<IMyPhoneList> = [
+	{
+		type: 'Свободный',
+		number: '79035630905',
+	},
+	{
+		type: 'Рабочий',
+		number: '79854335184',
+	},
+];
+// Мои почты
+export const myMailList: Array<IMyMailInformation> = [
+	{
+		name: 'artemov99@list.ru',
+	},
+	{
+		name: 'maxartem0419@gmail.com',
 	},
 ];
