@@ -1,40 +1,57 @@
 // Next
-import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 // React
-import uuid from 'react-uuid';
+import { useState } from 'react';
+// Hooks
+import useWindowSize from 'utils/useWindowSizeHook';
+// Components
+import { NavigateList } from './NavigateList';
 // Data
 import { arrayNavigateLinksInfo } from 'data/navigate';
 // Styles__Tailwind
-import Icon from '@material-tailwind/react/Icon';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
 // Styles__My
-import styles from './header.module.scss';
-import React from 'react';
+import Styles from './header.module.scss';
 
 export const Header: React.FC = () => {
+	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
+
+	const { width } = useWindowSize();
+
 	const router = useRouter();
+
+	const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+		setAnchorEl(event.currentTarget);
+	};
+	const open = Boolean(anchorEl);
+	const handleClose = () => {
+		setAnchorEl(null);
+	};
+
 	return (
-		<header className={`${styles.Header} bg-primary`}>
+		<header className={`${Styles.Header} bg-primary`}>
 			<div className="main-container">
-				<ul className={`${styles['Header-List']}`}>
-					{arrayNavigateLinksInfo.map((linkInfo) => {
-						return (
-							<li key={uuid()}>
-								<Link href={linkInfo.link} passHref>
-									<a
-										className={`
-											${linkInfo.link === router.pathname ? 'text-warning' : ''}
-											${styles['Header-Link']}
-										`}
-									>
-										<Icon name={linkInfo.logoName} size="xl" />
-										{linkInfo.text}
-									</a>
-								</Link>
-							</li>
-						);
-					})}
-				</ul>
+				{width >= 1024 ? (
+					<NavigateList contacts={arrayNavigateLinksInfo} />
+				) : (
+					<>
+						<Button
+							sx={{
+								color: 'black',
+							}}
+							variant="outlined"
+							aria-controls="basic-menu"
+							aria-expanded={open ? 'true' : undefined}
+							onClick={handleClick}
+						>
+							Меню
+						</Button>
+						<Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
+							<NavigateList contacts={arrayNavigateLinksInfo} />
+						</Menu>
+					</>
+				)}
 			</div>
 		</header>
 	);

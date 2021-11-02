@@ -44,13 +44,7 @@ export const SkillsContent: React.FC = () => {
 								{category.name}
 							</Typography>
 						</AccordionSummary>
-						<AccordionDetails
-							sx={{
-								display: 'grid',
-								gridTemplateColumns: 'repeat(4, 1fr)',
-								gap: '15px',
-							}}
-						>
+						<AccordionDetails className={styles.Skills_List}>
 							{category.elements.map((skill) => {
 								return (
 									<ProgressSkill

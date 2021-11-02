@@ -1,8 +1,9 @@
-// Intrefaces__Type
-import type { TColorTailwind } from './type/colors';
+// Type
+import type { TColorTailwind } from 'interfaces/type/colors';
 import type { TWorksStatus } from 'interfaces/type/works';
-// Intrefaces__Enum
-import { nameCategorySkill } from './enum';
+import type { TNamePhone } from 'interfaces/type/contacts';
+// Enum
+import { nameCategorySkill } from 'interfaces/enum';
 
 // Navigate
 export interface INavigateItemsProps {
@@ -131,7 +132,11 @@ export interface IColorProps {
 }
 
 // Contacts
-
+export interface IContactProps {
+  href: string | NodeJS.Process;
+  textTooltip: string;
+  image: JSX.Element;
+}
 export interface IInputProps {
   type: string;
   register: any;
@@ -145,4 +150,11 @@ export interface IInputsName {
   mail: string;
   nameCompany: string;
   text: string;
+}
+export interface IMyPhoneList {
+  type: TNamePhone;
+  number: string;
+}
+export interface IMyMailInformation {
+  name: string;
 }

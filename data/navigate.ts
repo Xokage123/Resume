@@ -1,4 +1,4 @@
-import type { INavigateItemsProps } from '../interfaces';
+import type { INavigateItemsProps } from 'interfaces';
 
 export const arrayNavigateLinksInfo: Array<INavigateItemsProps> = [
   {

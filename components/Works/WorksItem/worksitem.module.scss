@@ -1,0 +1,17 @@
+.Item {
+  border: 2px solid black;
+  border-radius: 10px;
+
+  &_Button {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .Item {
+    &_Button {
+      flex-direction: column;
+    }
+  }
+}
