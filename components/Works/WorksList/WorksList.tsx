@@ -8,19 +8,12 @@ import myWorksArray from 'data/works';
 import Box from '@mui/material/Box';
 import List from '@mui/material/List';
 // Styles__My
-import styles from './workslist.module.scss';
+import Styles from './workslist.module.scss';
 
 export const WorksList: React.FC = () => {
 	return (
 		<Box className="main-container">
-			<List
-				sx={{
-					width: '100%',
-					display: 'grid',
-					gridTemplateColumns: 'repeat(3, 1fr)',
-					gap: '20px',
-				}}
-			>
+			<List className={Styles.List}>
 				{myWorksArray.map((work) => {
 					return <WorksItem key={uuid()} item={work} />;
 				})}

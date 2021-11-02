@@ -1,7 +1,7 @@
 .Skills {
-  &-List {
+  &_List {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
   &-Item {
@@ -10,3 +10,12 @@
     align-items: center;
   }
 }
+
+@media all and (max-width: 768px) {
+  .Skills {
+    &_List {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
