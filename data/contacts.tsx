@@ -10,6 +10,7 @@ import type {
 import GmailIcon from 'public/photo/Contacts/gmail.png';
 import GithublIcon from 'public/photo/Contacts/github.png';
 import VKIcon from 'public/photo/Contacts/vk.png';
+import TelegramIcon from 'public/photo/Contacts/telegram.png';
 
 // Информация о моих контактах
 export const contactsInfo: Array<IContactProps> = [
@@ -30,6 +31,12 @@ export const contactsInfo: Array<IContactProps> = [
 		href: process.env.NEXT_PUBLIC_URL_MY_VK!,
 		textTooltip: 'Моя страница в VK',
 		image: <Image width={50} height={50} src={VKIcon} alt="svg" />,
+	},
+	// Telegram
+	{
+		href: process.env.NEXT_PUBLIC_MY_TELEGRAM!,
+		textTooltip: 'Моя ccылка на Telegram',
+		image: <Image width={50} height={50} src={TelegramIcon} alt="svg" />,
 	},
 ];
 // Мои телефоны

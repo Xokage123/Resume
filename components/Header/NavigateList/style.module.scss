@@ -1,0 +1,22 @@
+.List {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Link {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+@media all and (max-width: 1024px) {
+  .List {
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px;
+  }
+
+  .Link {
+    color: black;
+  }
+}

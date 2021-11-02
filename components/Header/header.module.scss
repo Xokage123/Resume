@@ -6,15 +6,7 @@
   left: 0;
   z-index: 1000;
 
-  &-List {
-    display: flex;
-    justify-content: space-around;
+  &_Menu {
+    padding: 10px;
   }
-
-  &-Link {
-    display: flex;
-    align-items: center;
-    color: white;
-  }
-
 }

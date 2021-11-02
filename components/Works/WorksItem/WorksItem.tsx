@@ -13,6 +13,7 @@ import type { TWorksStatus } from 'interfaces/type/works';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import Typography from '@mui/material/Typography';
+import Styles from './worksitem.module.scss';
 
 export const WorksItem: React.FC<IWorksItem> = (props) => {
 	const router = useRouter();
@@ -26,15 +27,15 @@ export const WorksItem: React.FC<IWorksItem> = (props) => {
 
 	return (
 		<ListItem
+			className={Styles.Item}
 			sx={{
-				border: '2px solid black',
-				borderRadius: '10px',
 				backgroundColor: addColorItem(item.status),
 			}}
 			onClick={() => router.push(item.url)}
 			disablePadding
 		>
 			<ListItemButton
+				className={Styles.Item_Button}
 				sx={{
 					flexWrap: 'wrap',
 					justifyContent: 'center',

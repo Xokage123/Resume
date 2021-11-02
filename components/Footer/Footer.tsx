@@ -11,18 +11,18 @@ import NavLink from '@material-tailwind/react/NavLink';
 import GmailIcon from '../../public/photo/Contacts/gmail.png';
 import GithublIcon from '../../public/photo/Contacts/github.png';
 // Styles__My
-import styles from './footer.module.scss';
+import Styles from './footer.module.scss';
 
 export const Footer = () => {
 	return (
-		<footer className={`${styles.Footer} pt-4 pb-4`}>
+		<footer className={Styles.Footer}>
 			<div className="main-container">
-				<Nav>
+				<Nav className={Styles.FooterList}>
 					{contactsInfo.map((element) => (
 						<NavLink
 							key={uuid()}
 							href={element.href}
-							className={styles['Footer-Icon']}
+							className={Styles.FooterIcon}
 							ripple="light"
 						>
 							<FrameTooltip
