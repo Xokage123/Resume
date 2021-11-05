@@ -7,20 +7,24 @@
 
   &-Data {
     &List {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      flex-direction: row;
       gap: 20px;
     }
-    &Item {
 
+    &Item {
       border: 1px solid black !important;
       border-radius: 5px;
     }
   }
+}
 
-  // &-Item {
-  //   &_content_programmingLanguages {
-  //   }
-  // }
-
+@media all and (max-width: 768px) {
+  .MyPasport {
+    &-Data {
+      &List {
+        flex-direction: column;
+      }
+    }
+  }
 }

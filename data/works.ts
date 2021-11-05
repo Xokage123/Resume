@@ -69,7 +69,7 @@ export const colorsForStatus: Array<IColorProps> = [
   },
   {
     name: 'plans',
-    information: 'Проекты, которые пларируются',
+    information: 'Проекты, которые планируются в будущем',
     color: lime[200],
   },
 ];

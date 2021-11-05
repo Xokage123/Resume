@@ -12,7 +12,7 @@ import Styles from './workslist.module.scss';
 
 export const WorksList: React.FC = () => {
 	return (
-		<Box className="main-container">
+		<Box>
 			<List className={Styles.List}>
 				{myWorksArray.map((work) => {
 					return <WorksItem key={uuid()} item={work} />;
