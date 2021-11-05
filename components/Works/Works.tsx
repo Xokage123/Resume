@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 
 export const Works: React.FC = () => {
 	return (
-		<>
+		<Box className="main-container">
 			<Typography
 				sx={{
 					marginBottom: 0,
@@ -27,6 +27,8 @@ export const Works: React.FC = () => {
 			<List
 				sx={{
 					display: 'flex',
+					flexDirection: 'row',
+					flexWrap: 'wrap',
 				}}
 			>
 				{colorsForStatus.map((colorInfo) => {
@@ -48,6 +50,6 @@ export const Works: React.FC = () => {
 				})}
 			</List>
 			<WorksList />
-		</>
+		</Box>
 	);
 };
