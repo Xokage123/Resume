@@ -9,6 +9,7 @@ import { NavigateList } from './NavigateList';
 // Data
 import { arrayNavigateLinksInfo } from 'data/navigate';
 // Styles__Tailwind
+import { Box } from '@mui/material';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 // Styles__My
@@ -31,28 +32,38 @@ export const Header: React.FC = () => {
 
 	return (
 		<header className={`${Styles.Header} bg-primary`}>
-			<div className="main-container">
+			<Box
+				sx={
+					width < 1024
+						? {
+								display: 'flex',
+								justifyContent: 'center',
+						  }
+						: {}
+				}
+				className="main-container"
+			>
 				{width >= 1024 ? (
 					<NavigateList contacts={arrayNavigateLinksInfo} />
 				) : (
 					<>
 						<Button
 							sx={{
-								color: 'black',
+								color: 'white',
 							}}
 							variant="outlined"
 							aria-controls="basic-menu"
 							aria-expanded={open ? 'true' : undefined}
 							onClick={handleClick}
 						>
-							Меню
+							Навигация
 						</Button>
 						<Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
 							<NavigateList contacts={arrayNavigateLinksInfo} />
 						</Menu>
 					</>
 				)}
-			</div>
+			</Box>
 		</header>
 	);
 };

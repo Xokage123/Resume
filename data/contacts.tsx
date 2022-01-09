@@ -11,6 +11,7 @@ import GmailIcon from 'public/photo/Contacts/gmail.png';
 import GithublIcon from 'public/photo/Contacts/github.png';
 import VKIcon from 'public/photo/Contacts/vk.png';
 import TelegramIcon from 'public/photo/Contacts/telegram.png';
+import InstagramIcon from 'public/photo/Contacts/instagram.png';
 
 // Информация о моих контактах
 export const contactsInfo: Array<IContactProps> = [
@@ -37,6 +38,12 @@ export const contactsInfo: Array<IContactProps> = [
 		href: process.env.NEXT_PUBLIC_MY_TELEGRAM!,
 		textTooltip: 'Моя ccылка на Telegram',
 		image: <Image width={50} height={50} src={TelegramIcon} alt="svg" />,
+	},
+	// Instagram (Боже как же убого)
+	{
+		href: process.env.NEXT_PUBLIC_MY_INSTAGRAM!,
+		textTooltip: 'Моя ccылка на Instagram',
+		image: <Image width={50} height={50} src={InstagramIcon} alt="svg" />,
 	},
 ];
 // Мои телефоны

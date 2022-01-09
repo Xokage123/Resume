@@ -46,25 +46,25 @@ export const arrayProgrammingLanguages: Array<IProgressSkillProps> = [
 	{
 		сategory: nameCategorySkill.programmingLanguages,
 		name: 'JavaScript',
-		value: '80',
+		value: '90',
 		image: JS_ICON,
 	},
 	{
 		сategory: nameCategorySkill.programmingLanguages,
 		name: 'TypeScript',
-		value: '60',
+		value: '80',
 		image: TS_ICON,
 	},
 	{
 		сategory: nameCategorySkill.programmingLanguages,
 		name: 'Java',
-		value: '30',
+		value: '40',
 		image: JAVA_ICON,
 	},
 	{
 		сategory: nameCategorySkill.programmingLanguages,
 		name: 'Kotlin',
-		value: '30',
+		value: '40',
 		image: KOTLIN_ICON,
 	},
 ];
@@ -74,7 +74,7 @@ export const arrayProjectBuilders: Array<IProgressSkillProps> = [
 	{
 		сategory: nameCategorySkill.projectBuilders,
 		name: 'Webpack',
-		value: '60',
+		value: '70',
 		image: WEBPACK_ICON,
 	},
 	// Gulp
@@ -129,7 +129,7 @@ export const arrayPreprocessors: Array<IProgressSkillProps> = [
 	{
 		сategory: nameCategorySkill.preprocessors,
 		name: 'Sass/Scss',
-		value: '80',
+		value: '90',
 		image: SASS_ICON,
 	},
 ];
@@ -139,21 +139,21 @@ export const arrayFrameworks: Array<IProgressSkillProps> = [
 	{
 		сategory: nameCategorySkill.frameworks,
 		name: 'React',
-		value: '80',
+		value: '90',
 		image: REACT_ICON,
 	},
 	// Vue 2
 	{
 		сategory: nameCategorySkill.frameworks,
 		name: 'Vue 2',
-		value: '80',
+		value: '85',
 		image: VUE_ICON,
 	},
 	// Vue 3
 	{
 		сategory: nameCategorySkill.frameworks,
 		name: 'Vue 3',
-		value: '50',
+		value: '70',
 		image: VUE_ICON,
 	},
 ];
@@ -163,7 +163,7 @@ export const arrayUIframeworks: Array<IProgressSkillProps> = [
 	{
 		сategory: nameCategorySkill.UIframework,
 		name: 'Material.js',
-		value: '50',
+		value: '70',
 		image: UI_MATERIAL_ICON,
 	},
 	// SemanticReact

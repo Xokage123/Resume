@@ -9,7 +9,7 @@
   color: white;
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1023px) {
   .List {
     flex-direction: column;
     gap: 20px;
@@ -17,6 +17,6 @@
   }
 
   .Link {
-    color: black;
+    color: black; 
   }
 }
