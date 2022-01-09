@@ -7,6 +7,8 @@ import NOT__PHOTO from 'public/photo/Works/NOT.png';
 import BLANCHARD__PHOTO from 'public/photo/Works/blanchard.png';
 import CULTURAL_MAP__PHOTO from 'public/photo/Works/cultural_map.png';
 import TEXNOZAVR__PHOTO from 'public/photo/Works/texnozavr.png';
+import MOIRE__PHOTO from 'public/photo/Works/moire.png';
+import GIVE_AWAY_PHOTO from 'public/photo/Works/give_amay.png';
 import MY_INSTAGRAM__PHOTO from 'public/photo/Works/my-instargam.png';
 
 const myWorksArray: Array<IWorksItemProps> = [
@@ -28,7 +30,7 @@ const myWorksArray: Array<IWorksItemProps> = [
       'Данный сайт содержит в себе информацию о выдающихся личностях и их жазненном пути, который показан на карте. Так же на сайте представлены страницы с информацией о выдающихся личностях различных направлений. Данный проект позволит любителям искусства узнать больше о скоих кумирах и знаменитых людях',
     status: 'doing',
   },
-  // Аналог магазина
+  // Аналог магазина "Технозавр"
   {
     title: 'Пример сайта магазина на Vue',
     url: 'https://vue-create-online-shop.vercel.app',
@@ -44,6 +46,24 @@ const myWorksArray: Array<IWorksItemProps> = [
     photo: MY_INSTAGRAM__PHOTO,
     description:
       'Сайт написан на React и является аналогом месссенджера Instagram. Реализована авторизация пользователя и просмотр фотографий. Так же есть возможность ставить лайки на фотографии, но для этого пользователя нужно аторизироваться',
+    status: 'graduated',
+  },
+  // Онлайн-магазин "Moire"
+  {
+    title: 'Онлайн-магазин "Moire"',
+    url: 'https://shope-moire.vercel.app',
+    photo: MOIRE__PHOTO,
+    description:
+      'Магазин написан на Vue 3. Как пример верски магазинов, которую я могу делать',
+    status: 'doing',
+  },
+  // Маленький сайт
+  {
+    title: 'Многостраничный сайт',
+    url: 'https://give-away.vercel.app',
+    photo: GIVE_AWAY_PHOTO,
+    description:
+      'Многостраничный сайт c простым функционалом и роутингами. Выполнен на Next.JS',
     status: 'graduated',
   },
   // Сайт с карточками
