@@ -5,7 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-import styles from './accordion.scss';
+import styles from './accordion.module.scss';
 
 interface Items {
 	content: JSX.Element;

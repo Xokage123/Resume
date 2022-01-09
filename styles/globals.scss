@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 
 html,
 body {
@@ -50,7 +50,6 @@ p {
 .error {
   color: red;
 }
-
 
 .border-botom-GrayDark {
   border-bottom-color: $GrayDark;

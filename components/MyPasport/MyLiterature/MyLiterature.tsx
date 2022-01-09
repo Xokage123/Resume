@@ -8,7 +8,7 @@ import { literatures } from '../../../data/pasport';
 
 import { Box } from '@mui/material/node_modules/@mui/system';
 
-import styles from './myliterature.scss';
+import styles from './myliterature.module.scss';
 
 export const MyLiterature: FC = () => {
 	return (

@@ -10,11 +10,7 @@
     "plugin:jest/recommended",
     "plugin:react/recommended"
   ],
-  "plugins": [
-    "prettier",
-    "jest",
-    "react"
-  ],
+  "plugins": ["prettier", "jest", "react"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
