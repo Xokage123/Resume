@@ -31,7 +31,7 @@ export const ProgressSkill: React.FC<IProgressSkillProps> = (props) => {
 					width={50}
 					height={50}
 					alt="Card Image"
-				></Image>
+				/>
 				<Progress
 					className={styles['ProgressItem-Progress']}
 					color={colorProgress}
