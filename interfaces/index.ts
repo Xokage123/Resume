@@ -44,7 +44,7 @@ export interface IUniversityInformation {
 }
 // Информация о резюме
 export interface IResumeInformation {
-  // Название ссайта
+  // Название сайта
   name: string;
   // Название позиции
   position: string;

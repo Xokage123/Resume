@@ -1,10 +1,9 @@
 import { StrictMode } from 'react';
+import { useRouter } from 'next/router';
 
-// Components
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 
-// Styles
 import styles from './main.module.scss';
 
 interface ILauoutProps {
@@ -12,7 +11,10 @@ interface ILauoutProps {
 }
 
 const MainLayout: React.FC<ILauoutProps> = (props) => {
+	const router = useRouter();
+
 	const { children } = props;
+
 	return (
 		<StrictMode>
 			<Header />
